@@ -1,0 +1,21 @@
+{
+  "name": "promised-twitter",
+  "version": "0.1.0",
+  "description": "Twitter API client library for node.js. Uses promises instead of callbacks.",
+  "main": "lib/twitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "promise",
+    "twitterAPI"
+  ],
+  "dependencies": {
+    "bluebird": "^2.9.15",
+    "promise-throttle": "0.1.0",
+    "twitter": "1.2.5"
+  },
+  "author": "Ivan Vasilov <vasilov.ivan@gmail.com> (http://github.com/ivasilov)",
+  "license": "MIT"
+}
