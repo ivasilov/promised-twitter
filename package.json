@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "bluebird": "^2.9.15",
-    "promise-throttle": "0.1.0",
+    "promise-throttle": "0.2.0",
     "twitter": "1.2.5"
   },
   "author": "Ivan Vasilov <vasilov.ivan@gmail.com> (http://github.com/ivasilov)",
