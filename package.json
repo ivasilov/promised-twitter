@@ -1,8 +1,9 @@
 {
   "name": "promised-twitter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Twitter API client library for node.js. Uses promises instead of callbacks.",
   "main": "lib/twitter.js",
+  "homepage": "https://github.com/ivasilov/promised-twitter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
