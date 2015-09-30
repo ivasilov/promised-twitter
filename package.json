@@ -1,6 +1,6 @@
 {
   "name": "promised-twitter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Twitter API client library for node.js. Uses promises instead of callbacks.",
   "main": "lib/twitter.js",
   "homepage": "https://github.com/ivasilov/promised-twitter",
@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "bluebird": "^2.9.15",
+    "lodash": "^3.10.1",
     "promise-throttle": "0.2.0",
     "twitter": "1.2.5"
   },
