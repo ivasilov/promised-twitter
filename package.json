@@ -5,7 +5,12 @@
   "main": "lib/twitter.js",
   "homepage": "https://github.com/ivasilov/promised-twitter",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && mocha",
+    "lint": "jshint lib/*.js && echo Lint passed."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivasilov/promised-twitter"
   },
   "keywords": [
     "twitter",
@@ -19,5 +24,12 @@
     "twitter": "1.2.5"
   },
   "author": "Ivan Vasilov <vasilov.ivan@gmail.com> (http://github.com/ivasilov)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3"
+  },
+  "jshintConfig": {
+    "node": true
+  }
 }
