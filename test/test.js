@@ -15,13 +15,13 @@ config = {
 };
 
 describe("Twitter", function() {
-  var twit = {}
+  var twit = {};
 
   before(function() {
     twit = new Twitter();
-  })
+  });
 
   it("Invalid token when not initialized properly", function() {
     assert.isRejected(twit.get("/statuses/show/noURL.json"));
-  })
-})
+  });
+});
