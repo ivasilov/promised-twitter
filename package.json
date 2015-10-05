@@ -6,7 +6,7 @@
   "homepage": "https://github.com/ivasilov/promised-twitter",
   "scripts": {
     "test": "npm run lint && mocha",
-    "lint": "jshint lib/*.js && echo Lint passed."
+    "lint": "jshint lib/*.js test/*.js && echo Lint passed."
   },
   "repository": {
     "type": "git",
