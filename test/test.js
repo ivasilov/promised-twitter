@@ -4,8 +4,10 @@ var Twitter = require("../lib/twitter.js"),
     chai = require("chai"),
     chaiAsPromised = require("chai-as-promised");
 
+chai.should();
 chai.use(chaiAsPromised);
 global.assert = chai.assert;
+global.expect = chai.expect;
 
 config = {
   "consumer_key":        process.env.CONSUMER_KEY,
@@ -14,7 +16,7 @@ config = {
   "access_token_secret": process.env.ACCESS_TOKEN_SECRET
 };
 
-describe("Twitter", function() {
+describe("Initializing Twitter lib", function() {
   var twit = {};
 
   before(function() {
@@ -22,6 +24,6 @@ describe("Twitter", function() {
   });
 
   it("Invalid token when not initialized properly", function() {
-    assert.isRejected(twit.get("/statuses/show/noURL.json"));
+    return twit.get("/statuses/show/noURL.json").should.eventually.be.rejectedWith(error.InvalidTokenError);
   });
 });
