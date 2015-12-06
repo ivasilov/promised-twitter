@@ -5,7 +5,7 @@
   "main": "lib/twitter.js",
   "homepage": "https://github.com/ivasilov/promised-twitter",
   "scripts": {
-    "test": "npm run lint && mocha",
+    "test": "npm run lint && mocha --timeout 5000",
     "lint": "jshint lib/*.js test/*.js && echo Lint passed."
   },
   "repository": {
