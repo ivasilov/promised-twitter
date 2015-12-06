@@ -12,3 +12,6 @@ env:
   - secure: P0+Xp6aifRuozZY1dVnpHeklukIk2mg97S6gRvCHS2heQ7W+rFiGDLHtCXPK+WSovPx3fS8BWquvqnTEMqwESG2TKP+KoiLNvnHC1/yseOPBYsLfS66Xhwlwi8a1fRwI+MU4Jbrv9JikPdImJ6XkT/HZ0Fh1RIJLqzLhScm+9SA=
   - secure: R8yMkKlL83bqpuYJ7m0nGB9W4/kIuD7eOnDA/fxkW/rypLIhF2Mvg7K4TqIO0U7Rw6f3t/2Gea2gu1DNE848xcLgIWz4DxTWEokz3C69Wjw+2n15wuFk8yAzmS/CYDSIj/n9NTBUOVugT3VMRebO1PFm9g/Ahi4Zjf0R60ziQ4c=
   - secure: HFKXrCDu6AOgHh4gFLyEiElR10S+yGCSfDAwOqUUTmCZTOZoFIFMYGHdROCsIGJ43DzzveuB36u5YRP9gUbn0pGWgl3FLusDtVKtXBi5ezrDG+atyJwkR55HPrXWDb+o9AFMqqnxmOei3ZnWsx7PiQtwz782jIDarYx3gzCrvac=
+addons:
+  code_climate:
+    repo_token: 26cbd8941df26a687ae26e69f57e748f039d99af0f07d63b38d67373a3c9fb8f
