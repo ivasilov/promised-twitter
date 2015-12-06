@@ -4,6 +4,8 @@ var Twitter = require("../lib/twitter.js"),
     chai = require("chai"),
     chaiAsPromised = require("chai-as-promised");
 
+if (!process.env.TRAVIS) require('dotenv').load();
+
 chai.should();
 chai.use(chaiAsPromised);
 global.assert = chai.assert;
@@ -26,5 +28,22 @@ describe("Initializing Twitter lib", function() {
 
   it("Invalid token when not initialized properly", function() {
     return twit.get("/statuses/show/noURL.json").should.eventually.be.rejectedWith(error.InvalidTokenError);
+  });
+});
+
+
+describe("Testing Twitter methods", function() {
+  var twit = {};
+
+  before(function() {
+    twit = new Twitter(config);
+  });
+
+  it("Test the get method with the show API for a specific tweet", function() {
+    var promise = twit.get("/statuses/show/672950780727533568.json");
+    return Promise.all([
+      promise.should.eventually.have.property('text', 'Test tweet for my awesome node.js lib :).'),
+      promise.should.eventually.be.fulfilled
+    ]);
   });
 });
