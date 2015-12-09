@@ -1,9 +1,11 @@
 {
   "name": "promised-twitter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Twitter API client library for node.js. Uses promises instead of callbacks.",
   "main": "lib/twitter.js",
   "homepage": "https://github.com/ivasilov/promised-twitter",
+  "author": "Ivan Vasilov <vasilov.ivan@gmail.com> (http://github.com/ivasilov)",
+  "license": "MIT",
   "scripts": {
     "test": "npm run lint && mocha --timeout 5000",
     "lint": "jshint lib/*.js test/*.js && echo Lint passed."
@@ -24,8 +26,6 @@
     "promise-throttle": "0.2.0",
     "twitter": "1.2.5"
   },
-  "author": "Ivan Vasilov <vasilov.ivan@gmail.com> (http://github.com/ivasilov)",
-  "license": "MIT",
   "devDependencies": {
     "chai": "^3.3.0",
     "chai-as-promised": "^5.1.0",
