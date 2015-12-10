@@ -1,5 +1,5 @@
-var Twitter = require("../lib/twitter.js"),
-    error = require("../lib/error.js"),
+var Twitter = require("../src/twitter.js"),
+    error = require("../src/error.js"),
     Promise = require('bluebird'),
     chai = require("chai"),
     chaiAsPromised = require("chai-as-promised");
