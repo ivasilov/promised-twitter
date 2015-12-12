@@ -2,7 +2,8 @@ var twitterError = require('./error'),
     _ = require('lodash'),
     twit = require('twitter'),
     Promise = require('bluebird'),
-    common =  require('./lib/common');
+    common =  require('./lib/common'),
+    statuses =  require('./lib/statuses');
 
 
 function Twitter(options) {
@@ -11,17 +12,16 @@ function Twitter(options) {
   this.options.test = options.test || false;
   delete options.test;
   this.client = new twit(options);
+
+  this.statuses = {};
+  for (var method in statuses) {
+    this.statuses[method] = statuses[method].bind(this);
+  }
 }
 
 Twitter.prototype.get = common.get;
 Twitter.prototype.post = common.post;
 Twitter.prototype.stream = common.stream;
-
-Twitter.prototype.show = function(params) {
-  var path = "/statuses/show.json?id=" + params.id;
-  return this.get(path, params);
-};
-
 
 Twitter.prototype.lookup = function(params) {
   var self = this;

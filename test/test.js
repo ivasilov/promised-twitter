@@ -67,7 +67,7 @@ describe("Testing Twitter methods", function() {
   });
 
   it("Test show API with 1 tweet", function() {
-    var promise = twit.show({id: "672950780727533568"});
+    var promise = twit.statuses.show({id: "672950780727533568"});
     return Promise.all([
       promise.should.eventually.have.property('text', 'Test tweet for my awesome node.js lib :).'),
       promise.should.eventually.be.fulfilled
