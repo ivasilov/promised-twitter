@@ -20,9 +20,9 @@
     "twitterAPI"
   ],
   "dependencies": {
-    "bluebird": "^2.9.15",
-    "dotenv": "^1.2.0",
-    "lodash": "^3.10.1",
+    "bluebird": "3.0.6",
+    "dotenv": "1.2.0",
+    "lodash": "3.10.1",
     "promise-throttle": "0.2.0",
     "twitter": "1.2.5"
   },
