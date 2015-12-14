@@ -75,7 +75,7 @@ describe("Testing Twitter methods", function() {
   });
 
   it("Test lookup API with 100 ids of tweets", function() {
-    promise = twit.lookup(params);
+    promise = twit.statuses.lookup(params);
     return Promise.all([
       promise.should.eventually.be.fulfilled,
       promise.should.eventually.have.property('data'),
