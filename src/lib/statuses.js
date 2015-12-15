@@ -1,6 +1,10 @@
 var _ = require('lodash'),
     Promise = require('bluebird');
 
+module.exports.userTimeline = function(params) {
+  return this.get("/statuses/user_timeline.json", params);
+}
+
 module.exports.show = function(params) {
   var path = "/statuses/show.json?id=" + params.id;
   return this.get(path, params);
