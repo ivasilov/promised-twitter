@@ -6,19 +6,17 @@ module.exports.userTimeline = function(params) {
 }
 
 module.exports.show = function(params) {
-  var path = "/statuses/show.json?id=" + params.id;
-  return this.get(path, params);
+  return this.get("/statuses/show.json", params);
 };
 
 module.exports.lookup = function(params) {
   var self = this;
   var ids = _.chunk(params.id, 100);
-  delete params.id;
 
   return Promise.resolve(ids)
   .map(function(ids) {
-    var path = "/statuses/lookup.json?id=" + ids;
-    return self.get(path, params)
+    params.id = ids;
+    return self.get("/statuses/lookup.json", params)
     .then(function(res) {return { data: res };})
     .catch(function(e)  {return { error: e };});
   }).reduce(function(obj, res) {
