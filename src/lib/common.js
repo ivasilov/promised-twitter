@@ -33,9 +33,10 @@ module.exports.get = function(url, params) {
 };
 
 module.exports.post = function(url, params) {
+  var self = this;
   return new Promise(function(resolve, reject) {
     params = params || {};
-    this.client.post(url, params, function(error, data, response) {
+    self.client.post(url, params, function(error, data, response) {
       if (error) {
         return reject(error);
       } else {
@@ -47,9 +48,10 @@ module.exports.post = function(url, params) {
 
 
 module.exports.stream = function(url, params) {
+  var self = this;
   return new Promise(function(resolve, reject) {
     params = params || {};
-    this.client.stream(url, params, function(error, data, response) {
+    self.client.stream(url, params, function(error, data, response) {
       if (error) {
         return reject(error);
       } else {
