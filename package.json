@@ -22,7 +22,7 @@
   "dependencies": {
     "bluebird": "3.0.6",
     "dotenv": "1.2.0",
-    "lodash": "3.10.1",
+    "lodash": "4.17.19",
     "promise-throttle": "0.2.0",
     "twitter": "1.2.5"
   },
